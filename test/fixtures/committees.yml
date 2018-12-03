@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  committeeID: 1
+  comitname: MyString
+  facultyID: 1
+  meetday: MyString
+
+two:
+  committeeID: 1
+  comitname: MyString
+  facultyID: 1
+  meetday: MyString

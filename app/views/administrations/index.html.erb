@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Administrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Adminid</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Title</th>
+      <th>Extension</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @administrations.each do |administration| %>
+      <tr>
+        <td><%= administration.adminID %></td>
+        <td><%= administration.firstname %></td>
+        <td><%= administration.lastname %></td>
+        <td><%= administration.title %></td>
+        <td><%= administration.extension %></td>
+        <td><%= link_to 'Show', administration %></td>
+        <td><%= link_to 'Edit', edit_administration_path(administration) %></td>
+        <td><%= link_to 'Destroy', administration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Administration', new_administration_path %>

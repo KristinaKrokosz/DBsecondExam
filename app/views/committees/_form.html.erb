@@ -1,0 +1,37 @@
+<%= form_with(model: committee, local: true) do |form| %>
+  <% if committee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(committee.errors.count, "error") %> prohibited this committee from being saved:</h2>
+
+      <ul>
+      <% committee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :committeeID %>
+    <%= form.number_field :committeeID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comitname %>
+    <%= form.text_field :comitname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facultyID %>
+    <%= form.number_field :facultyID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :meetday %>
+    <%= form.text_field :meetday %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
